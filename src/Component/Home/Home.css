@@ -1,0 +1,270 @@
+.home {
+    margin-inline: auto;
+}
+
+section:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
+.landing-txt {
+    width: 42rem;
+}
+
+.landing-txt button {
+    color: black;
+}
+
+.header {
+    height: 4rem;
+    padding-left: 6.75rem;
+    background: var(--bg-opaque);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+}
+
+.header button {
+    outline: var(--clr-green) 2px solid;
+    color: var(--clr-green);
+    position: relative;
+    overflow: hidden;
+    transition:color linear .2s;
+}
+.header button::before{
+    content: "";
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    background-color:var(--clr-green);
+    transform: translate(150% ,50%);
+    border-radius: 50%;
+    transition: .5s linear all;
+    z-index: -1;
+}
+.header button:hover {
+    color: white;
+}
+.header button:hover::before {
+    transform: translate(0) scale(2);
+}
+.social-media svg {
+    color: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    transition: all linear .2s;
+}
+
+.side-menu {
+    background: #080808;
+}
+
+.side-menu ul li:not(:first-child) {
+    color: rgba(255, 255, 255, 0.35);
+    position: relative;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+}
+
+.side-menu ul li:first-child {
+    padding: .6rem .9rem;
+}
+
+.side-menu ul li:first-child p {
+    background: var(--clr-dark);
+    padding: .4rem .7rem;
+}
+
+.side-menu ul li:not(:first-child):hover, .social-media svg:hover {
+    color: var(--clr-white);
+}
+
+.side-menu ul li:not(:first-child)::before {
+    transition: all linear .2s;
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 1px;
+    top: -3px;
+    border-radius: 10px;
+    background: var(--clr-green);
+}
+
+.active-section {
+    background: var(--clr-dark);
+    transition: linear all .2s;
+    color: var(--clr-white) !important;
+}
+
+.active-section::before {
+    width: 100% !important;
+    left: 0;
+}
+
+.about-title h1, .experience-title h1, .projects-title h1, .project-title h2, .project-title p {
+    background: var(--clr-dark);
+}
+
+.about {
+    grid-template-columns: 1fr 300px;
+}
+
+.technologies p, .technology p {
+    background: var(--clr-lightgray);
+    padding: .2rem .8rem;
+    border-radius: 2rem;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.contact-txt {
+    max-width: 35rem;
+}
+
+.experience-item {
+    border-bottom: 1px solid var(--clr-lightgray);
+}
+
+.project-img {
+    background: var(--clr-lightgray);
+    aspect-ratio: 2/1;
+}
+
+@media (max-width: 78rem ) {
+    .home {
+        width: 85%;
+    }
+}
+
+@media (max-width: 61rem ) {
+    .water-drop {
+        position: absolute;
+        right: -30%;
+    }
+
+    .about {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+
+    .landing-txt {
+        width: 100%;
+    }
+
+    .landing-txt h1, .contact-container h1 {
+        font-size: 5rem;
+    }
+
+    .landing-txt h2 {
+        font-size: 2rem;
+    }
+
+    .about-title h1, .projects-title h1, .experience-title h1 {
+        font-size: 3rem;
+        top: -1.5rem;
+    }
+}
+
+@media (max-width: 49rem ) {
+    .project-item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 43rem ) {
+    .header {
+        height: 4rem;
+        padding-left: 5.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .landing-txt h1, .contact-container h1 {
+        font-size: clamp(3rem, 10vw, 4rem);
+    }
+
+    .landing-txt h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-title h1, .projects-title h1, .experience-title h1 {
+        font-size: 2rem;
+        top: -1rem;
+    }
+
+    .water-drop {
+        position: absolute;
+        right: -60%;
+    }
+}
+
+@media (max-width: 33rem ) {
+    .home {
+        width: 95%;
+    }
+
+    .home-container {
+        font-size: 1rem;
+    }
+
+    .landing-txt h1, .contact-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .landing-txt h2 {
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    .side-menu {
+        width: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .home {
+        padding-left: 2.5rem;
+    }
+
+    .water-drop {
+        position: absolute;
+        right: -90%;
+    }
+
+    .header {
+        height: 4rem;
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+
+    .side-menu ul {
+        height: 2.5rem;
+    }
+
+    .side-menu ul li:not(:first-child) {
+        padding: .4rem 1.5rem;
+    }
+
+    .side-menu ul li:not(:first-child)::before {
+        top: 0;
+    }
+
+    .side-menu ul li:first-child p {
+        background: transparent;
+        padding: 0;
+    }
+
+    .side-menu ul li:first-child {
+        padding: 0.4rem 1.4rem;
+    }
+
+    .header button {
+        font-size: .9rem;
+        width: 6rem;
+        height: 2rem;
+    }
+
+    .exp-txt {
+        font-size: 15px;
+    }
+
+    .technologies p, .technology p {
+        font-size: .9rem;
+    }
+}

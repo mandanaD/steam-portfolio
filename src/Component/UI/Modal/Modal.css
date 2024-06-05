@@ -1,0 +1,34 @@
+.modal-body {
+    width: 35rem;
+    background: var(--clr-lightgray);
+
+}
+
+.main-img {
+    border-radius: 5px 5px 0 0;
+}
+
+@media (max-width: 43rem ) {
+    .modal-body {
+        width: 85% !important;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 33rem ) {
+    .main-img {
+        margin-bottom: 1rem;
+    }
+
+    .modal-txt {
+        font-size: .78rem;
+    }
+
+    .project-desc h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-tech {
+        margin-block: 10px;
+    }
+}

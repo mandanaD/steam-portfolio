@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;900&family=Vazirmatn:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ------------------- */
+/* custom   */
+/* ------------------- */
+:root {
+    --clr-white: #e9ebf1;
+    --clr-green: #0afd9c;
+    --clr-dark: #111111;
+    --bg-opaque: hsla(0,0%,7%,.25);
+    --clr-lightgray: #232323;
+}
+
+/* ------------------- */
+/* Rest   */
+/* ------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    background: var(--clr-dark);
+    color: var(--clr-white);
+    font-size: 1.1rem;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+:target {
+    scroll-margin-block: 5ex;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    background-color: #f4f4f4;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border: 3px solid #fff;
+    border-radius: 16px;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0000;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+.capitalize {
+    text-transform: capitalize;
+}
+.green-text{
+    color: var(--clr-green);
+}
+.green-bg{
+    background: var(--clr-green);
+}
